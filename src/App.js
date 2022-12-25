@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Header } from "./components/Header";
-import { Productos } from "./components/Productos";
+import { Products } from "./components/Products";
 import "./App.css";
 
 //Redux
@@ -16,7 +16,7 @@ function App() {
         <div className="h-screen">
           <div className="max-w-7xl mx-auto mt-5">
             <Routes>
-              <Route path="/" element={<Productos />} />
+              <Route path="/" element={<Products />} />
             </Routes>
           </div>
         </div>
