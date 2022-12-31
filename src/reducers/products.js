@@ -2,6 +2,8 @@ import {
   CREATE_PRODUCT,
   CREATE_PRODUCT_ERROR,
   CREATE_PRODUCT_SUCCESFULLY,
+  START_GET_PRODUCTS,
+  GET_PRODUCTS_SUCCESFULLY
 } from "../types";
 
 // Every reducers has own state
@@ -30,6 +32,17 @@ export default function (state = initialState, action) {
         loading: false,
         error: action.payload,
       };
+      case START_GET_PRODUCTS:
+        return{
+          ...state,
+          loading: action.payload
+        }
+      case GET_PRODUCTS_SUCCESFULLY:
+        return{
+          ...state,
+          loading: false,
+          products: action.payload
+        }
     default:
       return state;
   }
